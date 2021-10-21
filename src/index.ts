@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { HolyPipePluginPlugin } from './definitions';
+import type { HolyPipePlugin } from './definitions';
 
-const HolyPipePlugin = registerPlugin<HolyPipePluginPlugin>('HolyPipePlugin', {
+const HolyPipe = registerPlugin<HolyPipePlugin>('HolyPipe', {
   web: () => import('./web').then(m => new m.HolyPipePluginWeb()),
 });
 
 export * from './definitions';
-export { HolyPipePlugin };
+export { HolyPipe };

@@ -5,7 +5,7 @@ Holy pipe - invoke registered fn directly from js
 ## Install
 
 ```bash
-npm install @thinhvu/capacitor-holy-pipe
+npm install capacitor-holy-pipe
 npx cap sync
 ```
 
