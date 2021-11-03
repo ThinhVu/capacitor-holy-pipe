@@ -24,7 +24,7 @@ npx cap sync
 
 ```javascript
 import { HolyPipe } from 'capacitor-holy-pipe';
-const login = async (username, password, rememberPassword) => await HolyPipe.echo({ 
+const login = (username, password, rememberPassword) => HolyPipe.echo({ 
   action: 'login', 
   params: { username, password, rememberPassword } 
 }, (resp) => {
