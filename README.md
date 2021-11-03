@@ -1,6 +1,6 @@
 # @thinhvu/capacitor-holy-pipe
 
-Holy pipe - invoke registered fn directly from js
+Holy pipe - Provide a flexible way to send signal/call Android function from JS side. (IOS not supported yet)
 
 ## Install
 
@@ -62,10 +62,13 @@ public class MainActivity extends BridgeActivity {
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| **`options`** | <code>{ action: string, params: any }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ value: any; }&gt;</code>
 
 --------------------
 
 </docgen-api>
+
+## Roadmap
+- Replace PluginCall mechanism with Capacitor "native bridge" to trigger, handle event from both side.
