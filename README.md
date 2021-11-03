@@ -72,3 +72,11 @@ public class MainActivity extends BridgeActivity {
 
 ## Roadmap
 - Replace PluginCall mechanism with Capacitor "native bridge" to trigger, handle event from both side.
+    ```javascript
+      HolyPipe.on('android-to-js', (params, callback) => { /* do something */ })
+      HolyPipe.emit('js-to-android', param1, param2, param3, ..., (response) => {});
+    ```
+    ```java
+        HolyPipePlugin.emit('android-to-js', param1, param2, ..., (response) -> {});
+        HolyPipePlugin.on('js-to-android', (param1, param2, ..., callback) -> { /* ... do something */ });
+    ```
